@@ -1,0 +1,12 @@
+[libraries]
+
+lib.files = [
+  "src/test_fir.vhd",
+  "src/fir.vhd",
+  "src/arraypkg.vhd",
+  "src/dac.vhd",
+  "src/sinewave.vhd",
+  "src/mask_gen.vhd",
+  "src/top.vhd"
+]
+
