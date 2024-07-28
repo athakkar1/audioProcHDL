@@ -11,31 +11,41 @@ ENTITY dac IS
     sclk : OUT STD_LOGIC;
     cs : OUT STD_LOGIC;
     data : OUT STD_LOGIC;
-    data_word : IN STD_LOGIC_VECTOR(dword - 1 DOWNTO 0)
+    data_word : IN STD_LOGIC_VECTOR(dword - 1 DOWNTO 0);
+    reset : in STD_LOGIC
   );
 END ENTITY dac;
 
 ARCHITECTURE behavioral OF dac IS
-  SIGNAL data_word_i : STD_LOGIC_VECTOR(dword - 1 DOWNTO 0);
+  SIGNAL data_word_i : STD_LOGIC_VECTOR(dword - 1 DOWNTO 0) := (OTHERS => '0');
   SIGNAL cs_i : STD_LOGIC := '1';
   SIGNAL sclk_i : STD_LOGIC := '0';
   SIGNAL data_i : STD_LOGIC := '0';
 BEGIN
-  PROCESS
+  PROCESS(mclk, reset)
     VARIABLE count : INTEGER := 0;
   BEGIN
-    WAIT UNTIL rising_edge(mclk);
+    if reset = '1' then
+      count := 0;
+      sclk_i <= '0';
+    elsif rising_edge(mclk) then
     count := count + 1;
     IF count = 1 THEN
       count := 0;
-      sclk <= NOT sclk_i;
+      sclk_i <= NOT sclk_i;
     END IF;
+  end if;
   END PROCESS;
 
-  PROCESS
+  PROCESS(sclk_i, reset)
     VARIABLE count : INTEGER := 0;
   BEGIN
-    WAIT UNTIL rising_edge(sclk_i);
+    if reset = '1' then
+      count := 0;
+      cs_i <= '1';
+      data_i <= '0';
+      data_word_i <= (OTHERS => '0');
+    elsif rising_edge(sclk_i) then
     cs_i <= '0';
     count := count + 1;
     IF count < 16 THEN
@@ -54,6 +64,7 @@ BEGIN
       cs_i <= '0';
       count := 0;
     END IF;
+  end if;
   END PROCESS;
   cs <= cs_i;
   sclk <= sclk_i;

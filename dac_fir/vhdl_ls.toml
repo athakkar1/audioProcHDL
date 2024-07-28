@@ -1,6 +1,6 @@
 [libraries]
 
-lib.files = [
+default.files = [
   "src/test_fir.vhd",
   "src/fir.vhd",
   "src/arraypkg.vhd",

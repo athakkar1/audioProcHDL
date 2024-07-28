@@ -10,7 +10,8 @@ ENTITY fir IS
     mask_i : IN mask;
     mclk : IN STD_LOGIC;
     data_in : IN INTEGER RANGE 0 TO 4095;
-    data_out : OUT INTEGER RANGE 0 TO 4095 := 0
+    data_out : OUT INTEGER RANGE 0 TO 4095 := 0;
+    reset : in std_logic
   );
 END ENTITY fir;
 
@@ -18,14 +19,18 @@ ARCHITECTURE behavioral OF fir IS
   SIGNAL points_i : buf := (OTHERS => 0);
 BEGIN
 
-  PROCESS
+  PROCESS(mclk, reset)
     VARIABLE sum : sfixed(25 DOWNTO -15);
     VARIABLE delay : INTEGER := 0;
   BEGIN
-    WAIT UNTIL rising_edge(mclk);
+    if reset = '1' then
+      sum := to_sfixed(0, 25, -15);
+      points_i <= (OTHERS => 0);
+      data_out <= 0;
+    elsif rising_edge(mclk) then
     sum := to_sfixed(0, 25, -15);
     --IF delay < (taps - 1/2) THEN
-    delay := delay + 1;
+    --delay := delay + 1;
     --END IF;
     FOR i IN taps - 1 DOWNTO 1 LOOP
       --IF delay = (taps - 1)/2 THEN
@@ -44,6 +49,7 @@ BEGIN
     ELSE
       data_out <= to_integer(sum);
     END IF;
+  end if;
   END PROCESS;
 
 END ARCHITECTURE;
