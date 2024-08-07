@@ -7,6 +7,7 @@ default.files = [
   "src/dac.vhd",
   "src/sinewave.vhd",
   "src/mask_gen.vhd",
-  "src/top.vhd"
+  "src/top.vhd",
+  "src/tb_top.vhd"
 ]
 

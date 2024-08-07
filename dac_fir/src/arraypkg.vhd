@@ -4,9 +4,9 @@ USE ieee.numeric_std.ALL;
 USE ieee.fixed_pkg.ALL;
 
 PACKAGE arraypkg IS
-  CONSTANT taps : INTEGER := 155;
+  CONSTANT taps : INTEGER := 59;
   CONSTANT num_points : INTEGER := 1024;
-  CONSTANT mask_points : INTEGER := 155;
+  CONSTANT mask_points : INTEGER := 59;
   CONSTANT mclk_freq : integer := 125000000;
   constant count_const : integer := mclk_freq/num_points;
   SUBTYPE point IS INTEGER RANGE 0 TO 4095;

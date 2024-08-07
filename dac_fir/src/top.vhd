@@ -13,6 +13,7 @@ port(
     sclk : out std_logic;
     cs : out std_logic;
     data : out std_logic;
+    ldac : out std_logic := '0';
     freq1_inc : in std_logic;
     freq1_dec : in std_logic;
     freq2_inc : in STD_LOGIC;
@@ -32,12 +33,18 @@ signal count1 : integer range 0 to 1220;
 signal count2 : integer range 0 to 1220;
 signal frequency1 : integer range 0 to 22000 := 1000;
 signal frequency2 : integer range 0 to 22000 := 2000;
-signal added_wave : unsigned(12 downto 0) := (others => '0');
+signal added_wave : STD_LOGIC_VECTOR(12 downto 0) := (others => '0');
+signal sclk_i : std_logic := '0';
+signal cs_i : std_logic := '1';
+signal data_i : std_logic := '0';
 begin
 filtered_data_vec <= std_logic_vector(to_unsigned(filtered_data, 12)) & "0000";
 reset <= freq1_dec OR freq1_inc OR freq2_dec OR freq2_inc;
 count1 <= count_const / frequency1;
 count2 <= count_const / frequency2;
+sclk <= sclk_i;
+cs <= cs_i;
+data <= data_i;
 fir_inst: entity work.fir
  port map(
     mask_i => decimal_numbers,
@@ -52,9 +59,9 @@ dac_inst: entity work.dac
 )
  port map(
     mclk => mclk_dac,
-    sclk => sclk,
-    cs => cs,
-    data => data,
+    sclk => sclk_i,
+    cs => cs_i,
+    data => data_i,
     data_word => filtered_data_vec,
     reset => reset
 );
@@ -64,7 +71,7 @@ PROCESS(mclk)
   BEGIN
     if rising_edge(mclk) then
     count := count + 1;
-    IF count = 1134 THEN
+    IF count = 1417 THEN
       sample_clk <= NOT sample_clk;
       count := 0;
     END IF;
@@ -90,6 +97,27 @@ PROCESS(mclk)
   end if;
   END PROCESS;
 
+  process (freq1_dec, freq1_inc, freq2_dec, freq2_inc)
+  begin
+    if freq1_dec = '1' then
+      if frequency1 > 1000 then
+        frequency1 <= frequency1 - 1000;
+      end if;
+    elsif freq1_inc = '1' then
+      if frequency1 < 22000 then
+        frequency1 <= frequency1 + 1000;
+      end if;
+    elsif freq2_dec = '1' then
+      if frequency2 > 1000 then
+        frequency2 <= frequency2 - 1000;
+      end if;
+    elsif freq2_inc = '1' then
+      if frequency2 < 22000 then
+        frequency2 <= frequency2 + 1000;
+      end if;
+    end if;
+  end process;
+
   PROCESS(mclk, reset)
     VARIABLE count : INTEGER := 0;
   BEGIN
@@ -108,6 +136,6 @@ PROCESS(mclk)
     END IF;
   end if;
   END PROCESS;
-  added_wave <= to_unsigned(wave(i) + wave(j), 13);
-  data_in <= to_integer(added_wave(12 downto 1));
+  added_wave <= STD_LOGIC_VECTOR(to_unsigned(wave(i) + wave(j), added_wave'length));
+  data_in <= to_integer(unsigned(added_wave(12 downto 1)));
 end architecture;

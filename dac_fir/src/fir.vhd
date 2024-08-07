@@ -25,6 +25,7 @@ BEGIN
   BEGIN
     if reset = '1' then
       sum := to_sfixed(0, 25, -15);
+      delay := 0;
       points_i <= (OTHERS => 0);
       data_out <= 0;
     elsif rising_edge(mclk) then

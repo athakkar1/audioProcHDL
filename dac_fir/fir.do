@@ -1,15 +1,18 @@
 quit -sim
 vdel -all
 vlib work
-vcom D:fir_filter/src/arraypkg.vhd
-vcom D:fir_filter/src/fir.vhd
-vcom D:fir_filter/src/test_fir.vhd
 
-vsim -novopt test_fir
-add wave /test_fir/*
-add wave -radix decimal -format analog /fir_inst/data_in
-add wave -radix decimal -format analog /fir_inst/data_out
+vcom /home/somalianpirate/Documents/projects/audioProcHDL/arraypkg.vhd +cover
+vcom /home/somalianpirate/Documents/projects/audioProcHDL/mask_gen.vhd +cover
+vcom /home/somalianpirate/Documents/projects/audioProcHDL/sinewave.vhd +cover
+vcom /home/somalianpirate/Documents/projects/audioProcHDL/dac.vhd +cover
+vcom /home/somalianpirate/Documents/projects/audioProcHDL/fir.vhd +cover
+vcom /home/somalianpirate/Documents/projects/audioProcHDL/top.vhd +cover
+vcom /home/somalianpirate/Documents/projects/audioProcHDL/tb_top.vhd +cover
 
-run 5 ms
+vsim -novopt -coverage tb_top
+add wave /top_inst/*
+
+run 6 ms
 
 view wave
