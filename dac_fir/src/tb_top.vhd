@@ -11,10 +11,10 @@ architecture behavioral of tb_top is
     signal cs : std_logic;
     signal data : std_logic;
     signal ldac : std_logic := '0';
-    signal freq1_inc : std_logic;
-    signal freq1_dec : std_logic;
-    signal freq2_inc : std_logic;
-    signal freq2_dec : std_logic;
+    signal freq1_inc : std_logic := '0';
+    signal freq1_dec : std_logic := '0';
+    signal freq2_inc : std_logic := '0';
+    signal freq2_dec : std_logic := '0';
 begin
     top_inst: entity work.top
     port map(
