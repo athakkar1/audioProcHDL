@@ -1,8 +1,18 @@
 m255
 K4
 z2
+Z0 !s12c _opt1
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
 !s12c _opt
-Z0 !s99 nomlopt
+R1
 !s11e vcom 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -10,308 +20,321 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 d/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir
+Z2 d/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir
 T_opt
-!s110 1723218478
-VZGUfSNPQ2Ji842zP[C2UT2
-04 6 10 work tb_top behavioral 1
-=1-000ae431a4f1-66b63a2d-d5f63-13711
-R0
-!s12b OEM100
-!s124 OEM10U4 
-o-quiet -auto_acc_if_foreign -work work
-tCvgOpt 0
-n@_opt
-OL;O;2023.3;77
-Parraypkg
-Z2 DPx4 ieee 17 fixed_float_types 0 22 ffi_ZLQ=jLAmYO?69bja?3
-Z3 DBx4 ieee 17 fixed_generic_pkg 4 body 22 oEANA[?]]:^NiaRa4al943
-Z4 DPx4 ieee 9 fixed_pkg 0 22 PQo]@iK^QBglmSTZ7kJDK3
-Z5 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
-Z6 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
-Z7 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
-!i122 0
-w1723063174
+!s110 1723308556
+VGPKzGhbgAQG>K9FLdHzDX3
+Z3 04 6 10 work tb_top behavioral 1
+=1-000ae431a4f1-66b79a0c-7c647-9add
 R1
+Z4 !s12b OEM100
+Z5 !s124 OEM10U4 
+Z6 o-quiet -auto_acc_if_foreign -work work
+Z7 tCvgOpt 0
+n@_opt
+Z8 OL;O;2023.3;77
+R2
+T_opt1
+Z9 !s110 1723314858
+V7:LYa7C1Q6X8k`ITai]nZ0
+R3
+=1-000ae431a4f1-66b7b2aa-90d22-9e92
+R1
+R4
+R5
+R6
+R7
+n@_opt1
+R8
+Parraypkg
+Z10 DPx4 ieee 17 fixed_float_types 0 22 ffi_ZLQ=jLAmYO?69bja?3
+Z11 DBx4 ieee 17 fixed_generic_pkg 4 body 22 oEANA[?]]:^NiaRa4al943
+Z12 DPx4 ieee 9 fixed_pkg 0 22 PQo]@iK^QBglmSTZ7kJDK3
+Z13 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z14 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z15 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+w1723218531
+R2
 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd
 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd
 l0
 L6 12
-V^]0kMQ4dla@H;1Thj@h9J0
-!s100 >NPZTLg5HJ=ERWMhELB;D3
-Z8 OL;C;2023.3;77
+VbmhVULM`LazU]D[PX^2`E3
+!s100 2bWia==QEo5=nK6`kO0K`0
+Z16 OL;C;2023.3;77
 32
-Z9 !s110 1723218477
+Z17 !s110 1723314857
 !i10b 1
-Z10 !s108 1723218477.000000
+Z18 !s108 1723314857.000000
 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd|+cover|
 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd|
 !i113 0
-Z11 !s102 +cover
-Z12 o+cover
-Z13 tExplicit 1 CvgOpt 0
+Z19 !s102 +cover
+Z20 o+cover
+Z21 tExplicit 1 CvgOpt 0
 Edac
-Z14 w1722034860
-R5
-R6
-R7
+Z22 w1723311371
+R13
+R14
+R15
 !i122 3
-R1
-Z15 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd
-Z16 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd
+R2
+Z23 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd
+Z24 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd
 l0
 L5 1
 VQB4?X8MPiFoPR:WV71l8T3
 !s100 zgLzM>7EEV?VF75;GjNC10
-R8
+R16
 32
 R9
 !i10b 1
-R10
-Z17 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd|+cover|
-Z18 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd|
+R18
+Z25 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd|+cover|
+Z26 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd|
 !i113 0
-R11
-R12
-R13
+R19
+R20
+R21
 Abehavioral
-R5
-R6
-R7
-Z19 DEx4 work 3 dac 0 22 QB4?X8MPiFoPR:WV71l8T3
+R13
+R14
+R15
+Z27 DEx4 work 3 dac 0 22 QB4?X8MPiFoPR:WV71l8T3
 !i122 3
 l24
 L19 54
-VG3CLYnLQz3BQ>RfHnF8[X2
-!s100 WzWU`eLVPGBJ2dmYcI2Mg1
-R8
+VT^=z4G19IPRMLnlkDeiEk2
+!s100 i[GQ8997oWJ2l>oAlml7k1
+R16
 32
 R9
 !i10b 1
-R10
-R17
 R18
+R25
+R26
 !i113 0
-R11
+R19
+R20
+R21
+Efir
+Z28 w1723041752
+Z29 DPx4 work 8 arraypkg 0 22 bmhVULM`LazU]D[PX^2`E3
+R10
+Z30 DPx4 ieee 17 fixed_generic_pkg 0 22 2hf4dO<a7fz_fMXj:L2T^2
 R12
 R13
-Efir
-Z20 w1723041752
-Z21 DPx4 work 8 arraypkg 0 22 ^]0kMQ4dla@H;1Thj@h9J0
-R2
-Z22 DPx4 ieee 17 fixed_generic_pkg 0 22 2hf4dO<a7fz_fMXj:L2T^2
-R4
-R5
-R6
-R7
+R14
+R15
 !i122 4
-R1
-Z23 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd
-Z24 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd
+R2
+Z31 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd
+Z32 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd
 l0
 L8 1
 Vjl2EBP44HnP[W9HAmoU7`3
 !s100 mbNdHSh5zC2mUaf@QB[^g3
-R8
+R16
 32
 R9
 !i10b 1
-R10
-Z25 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd|+cover|
-Z26 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd|
+Z33 !s108 1723314858.000000
+Z34 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd|+cover|
+Z35 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd|
 !i113 0
-R11
+R19
+R20
+R21
+Abehavioral
+R29
+R10
+R30
 R12
 R13
-Abehavioral
-R21
-R2
-R22
-R4
-R5
-R6
-R7
-Z27 DEx4 work 3 fir 0 22 jl2EBP44HnP[W9HAmoU7`3
+R14
+R15
+Z36 DEx4 work 3 fir 0 22 jl2EBP44HnP[W9HAmoU7`3
 !i122 4
 l20
 L18 39
 VD2nT<[n<fko8BU:SKTXVg1
 !s100 aU9UZ4:InTVGlQS;mYzNl1
-R8
+R16
 32
 R9
 !i10b 1
-R10
-R25
-R26
+R33
+R34
+R35
 !i113 0
+R19
+R20
+R21
+Pmask_gen
+R29
+R10
+R13
 R11
 R12
-R13
-Pmask_gen
-R21
-R2
-R5
-R3
-R4
-R6
-R7
+R14
+R15
 !i122 1
-w1723063333
-R1
+w1723312365
+R2
 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd
 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd
 l0
 L7 64
-ViLeNzQ@:nj;Na<RHn1W[h0
-!s100 ;SlG9GA=hi@@]dTc:`^^o0
-R8
+VeYbRdU?Yck_4>kcz@]Jz?1
+!s100 B^>IohQJ[QTiAk<;:e3K:3
+R16
 32
-R9
+R17
 !i10b 1
-R10
+R18
 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd|+cover|
 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd|
 !i113 0
+R19
+R20
+R21
+Psinewave
+R10
 R11
 R12
 R13
-Psinewave
-R2
-R3
-R4
-R5
-R21
-R6
-R7
+R29
+R14
+R15
 !i122 2
 w1721611846
-R1
+R2
 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd
 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd
 l0
 L7 5
 VY=HCi[WMihcRE37BAdg3V2
 !s100 >fX[A=1aFRCg@gbW9hD>m3
-R8
+R16
 32
-R9
+R17
 !i10b 1
-R10
+R18
 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd|+cover|
 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd|
 !i113 0
-R11
-R12
-R13
+R19
+R20
+R21
 Etb_top
-Z28 w1723218468
-R5
-R6
-R7
+Z37 w1723218468
+R13
+R14
+R15
 !i122 6
-R1
-Z29 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd
-Z30 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd
+R2
+Z38 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd
+Z39 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd
 l0
 L5 1
 VI_DDBZWB2RZ7GS1SFj]C[2
 !s100 PfT1T;PdjKeG:H>;R?DBJ3
-R8
+R16
 32
 R9
 !i10b 1
-R10
-Z31 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd|+cover|
-Z32 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd|
+R33
+Z40 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd|+cover|
+Z41 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd|
 !i113 0
-R11
-R12
-R13
-Abehavioral
-Z33 DPx4 work 8 mask_gen 0 22 iLeNzQ@:nj;Na<RHn1W[h0
-Z34 DPx4 work 8 sinewave 0 22 Y=HCi[WMihcRE37BAdg3V2
+R19
+R20
 R21
-R2
-R22
-R4
-Z35 DEx4 work 3 top 0 22 ^I4Y6`T=oj`U=PmZYRdlh1
-R5
-R6
-R7
+Abehavioral
+Z42 DPx4 work 8 mask_gen 0 22 eYbRdU?Yck_4>kcz@]Jz?1
+Z43 DPx4 work 8 sinewave 0 22 Y=HCi[WMihcRE37BAdg3V2
+R29
+R10
+R30
+R12
+Z44 DEx4 work 3 top 0 22 ^I4Y6`T=oj`U=PmZYRdlh1
+R13
+R14
+R15
 DEx4 work 6 tb_top 0 22 I_DDBZWB2RZ7GS1SFj]C[2
 !i122 6
 l18
 L8 38
 VaP`THi5Ml798??hoE;nj?0
 !s100 m`R_]@LP4io6?`>=YRQma0
-R8
+R16
 32
 R9
 !i10b 1
-R10
-R31
-R32
+R33
+R40
+R41
 !i113 0
-R11
+R19
+R20
+R21
+Etop
+Z45 w1723314853
+R42
+R43
+R29
+R10
+R30
 R12
 R13
-Etop
-Z36 w1723063309
-R33
-R34
-R21
-R2
-R22
-R4
-R5
-R6
-R7
+R14
+R15
 !i122 5
-R1
-Z37 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd
-Z38 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd
+R2
+Z46 8/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd
+Z47 F/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd
 l0
 L10 1
 V^I4Y6`T=oj`U=PmZYRdlh1
 !s100 Zn<TG;Hk=PQfCgYIEVA?V1
-R8
+R16
 32
 R9
 !i10b 1
-R10
-Z39 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd|+cover|
-Z40 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd|
+R33
+Z48 !s90 -reportprogress|300|/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd|+cover|
+Z49 !s107 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd|
 !i113 0
-R11
+R19
+R20
+R21
+Abehavioral
+R27
+R36
+R42
+R43
+R29
+R10
+R30
 R12
 R13
-Abehavioral
-R19
-R27
-R33
-R34
-R21
-R2
-R22
-R4
-R5
-R6
-R7
-R35
+R14
+R15
+R44
 !i122 5
 l40
-L23 119
-VWgV2n5l0V@ZJ1`n^Ag3QB0
-!s100 Z@fmDiP_AKkbiRbme]Y<C0
-R8
+L23 128
+VbFCO`If6PL0T]f>2BOVKY1
+!s100 ^E1eBLX=l3jZEe6abCm[N0
+R16
 32
 R9
 !i10b 1
-R10
-R39
-R40
+R33
+R48
+R49
 !i113 0
-R11
-R12
-R13
+R19
+R20
+R21

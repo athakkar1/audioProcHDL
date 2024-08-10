@@ -12,6 +12,7 @@ vcom /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd
 
 vsim -coverage tb_top
 add wave /top_inst/*
+add wave /top_inst/dac_inst/*
 
 run 6 ms
 

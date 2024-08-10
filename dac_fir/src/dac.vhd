@@ -48,7 +48,7 @@ BEGIN
     elsif rising_edge(sclk_i) then
     cs_i <= '0';
     count := count + 1;
-    IF count < 16 THEN
+    IF count < 17 THEN
       IF cs_i = '0' THEN
         data_i <= data_word_i(15);
         data_word_i <= data_word_i(dword - 2 DOWNTO 0) & '0';
@@ -56,7 +56,7 @@ BEGIN
         data_word_i <= data_word;
         count := 0;
       END IF;
-    ELSIF count >= 16 AND count < 21 THEN
+    ELSIF count >= 17 AND count < 19 THEN
       cs_i <= '1';
       data_word_i <= data_word;
       count := count + 1;

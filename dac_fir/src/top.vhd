@@ -31,8 +31,8 @@ SIGNAL sample_clk : STD_LOGIC := '0';
 signal reset : std_logic := '0';
 signal count1 : integer range 0 to 1220;
 signal count2 : integer range 0 to 1220;
-signal frequency1 : integer range 0 to 22000 := 1000;
-signal frequency2 : integer range 0 to 22000 := 2000;
+signal frequency1 : integer range 0 to 22000 := 2000;
+signal frequency2 : integer range 0 to 22000 := 8000;
 signal added_wave : STD_LOGIC_VECTOR(12 downto 0) := (others => '0');
 signal sclk_i : std_logic := '0';
 signal cs_i : std_logic := '1';
@@ -54,17 +54,26 @@ fir_inst: entity work.fir
     reset => reset
 );
 dac_inst: entity work.dac
- generic map(
-    dword => 16
-)
  port map(
     mclk => mclk_dac,
     sclk => sclk_i,
     cs => cs_i,
     data => data_i,
     data_word => filtered_data_vec,
-    reset => reset
-);
+    reset => reset);
+
+process(mclk)
+variable count : integer := 0;
+begin
+if rising_edge(mclk) then
+    if count < 2 then
+        count := count + 1;
+    else
+        mclk_dac <= not mclk_dac;
+        count := 0;
+    end if;
+end if;
+end process;
 
 PROCESS(mclk)
     VARIABLE count : INTEGER := 0;
