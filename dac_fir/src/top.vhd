@@ -14,6 +14,8 @@ port(
     cs : out std_logic;
     data : out std_logic;
     ldac : out std_logic := '0';
+    vauxp14 : in std_logic;
+    vauxn14 : in std_logic;
     freq1_inc : in std_logic;
     freq1_dec : in std_logic;
     freq2_inc : in STD_LOGIC;
@@ -22,8 +24,14 @@ end entity top;
 
 architecture behavioral of top is
 signal mclk_dac : std_logic := '0';
+signal raw_adc_out : std_logic_vector(15 downto 0);
+signal adc_out : std_logic_vector(15 downto 0);
+signal adc_rd_vec : std_logic_vector(0 downto 0);
+signal adc_rd : std_logic;
+signal eoc_out_i : std_logic;
 signal filtered_data : point := 0;
 signal filtered_data_vec : std_logic_vector(15 downto 0);
+signal temp_data_vec : std_logic_vector(15 downto 0);
 SIGNAL i : INTEGER RANGE 0 TO num_points := 0;
 SIGNAL j : INTEGER RANGE 0 TO num_points := 0;
 SIGNAL data_in : point := 0;
@@ -45,11 +53,19 @@ count2 <= count_const / frequency2;
 sclk <= sclk_i;
 cs <= cs_i;
 data <= data_i;
+adc_rd_vec(0) <= adc_rd;
+
+ila_inst: entity work.ila_0
+PORT map(
+clk => mclk,
+probe0 => adc_out,
+probe1 => adc_rd_vec
+);
 fir_inst: entity work.fir
  port map(
     mask_i => decimal_numbers,
-    mclk => sample_clk,
-    data_in => data_in,
+    mclk => adc_rd,
+    data_in => to_integer(unsigned(adc_out)),
     data_out => filtered_data,
     reset => reset
 );
@@ -59,8 +75,29 @@ dac_inst: entity work.dac
     sclk => sclk_i,
     cs => cs_i,
     data => data_i,
-    data_word => filtered_data_vec,
+    data_word => adc_out,
     reset => reset);
+
+xadc_wiz_0_inst : entity work.xadc_wiz_0
+  port map(
+    daddr_in    => "0011110", --fill
+    den_in      => eoc_out_i, --fill
+    di_in       => (others => '0'),
+    dwe_in      => '0',
+    do_out      => raw_adc_out,
+    drdy_out    => adc_rd,
+    dclk_in     => mclk,
+    vauxp14     => vauxp14,
+    vauxn14     => vauxn14,
+    busy_out    => open,
+    channel_out => open,
+    eoc_out     => eoc_out_i,
+    eos_out     => open,
+    alarm_out   => open,
+    vp_in       => '0',
+    vn_in       => '0'
+  );
+
 
 process(mclk)
 variable count : integer := 0;
@@ -127,24 +164,31 @@ PROCESS(mclk)
     end if;
   end process;
 
-  PROCESS(mclk, reset)
-    VARIABLE count : INTEGER := 0;
-  BEGIN
-    if reset = '1' then
-      count := 0;
-      j <= 0;
-    elsif rising_edge(mclk) then
-    count := count + 1;
-    IF count >= count2 THEN
-      IF j < num_points - 1 THEN
-        j <= j + 1;
-      ELSE
-        j <= 0;
-      END IF;
-      count := 0;
-    END IF;
-  end if;
-  END PROCESS;
-  added_wave <= STD_LOGIC_VECTOR(to_unsigned(wave(i) + wave(j), added_wave'length));
-  data_in <= to_integer(unsigned(added_wave(12 downto 1)));
+  process(adc_rd)
+  begin
+    if adc_rd = '1' then
+      adc_out <= raw_adc_out;
+    end if;
+  end process;
+
+  --PROCESS(mclk, reset)
+  --  VARIABLE count : INTEGER := 0;
+  --BEGIN
+  --  if reset = '1' then
+  --    count := 0;
+  --    j <= 0;
+  --  elsif rising_edge(mclk) then
+  --  count := count + 1;
+  --  IF count >= count2 THEN
+  --    IF j < num_points - 1 THEN
+  --      j <= j + 1;
+  --    ELSE
+  --      j <= 0;
+  --    END IF;
+  --    count := 0;
+  --  END IF;
+  --end if;
+  --END PROCESS;
+  --added_wave <= STD_LOGIC_VECTOR(to_unsigned(wave(i) + wave(j), added_wave'length));
+  --data_in <= to_integer(unsigned(added_wave(12 downto 1)));
 end architecture;

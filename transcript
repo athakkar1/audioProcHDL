@@ -1,0 +1,718 @@
+# //  Questa Intel Starter FPGA Edition-64
+# //  Version 2023.3 linux_x86_64 Jul 17 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project dac_fir
+do fir.do
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is somalianpirate@somalia.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:46:55 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Compiling package arraypkg
+# End time: 13:46:55 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:46:55 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package instance fixed_pkg
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package mask_gen
+# End time: 13:46:56 on Aug 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:46:56 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package sinewave
+# End time: 13:46:56 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:46:56 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dac
+# -- Compiling architecture behavioral of dac
+# End time: 13:46:56 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:46:56 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling entity fir
+# -- Compiling architecture behavioral of fir
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vcom-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# End time: 13:46:56 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:46:56 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Compiling entity top
+# -- Compiling architecture behavioral of top
+# -- Loading entity fir
+# -- Loading entity dac
+# End time: 13:46:56 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:46:56 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_top
+# -- Compiling architecture behavioral of tb_top
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Loading entity top
+# End time: 13:46:56 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -coverage tb_top 
+# Start time: 13:46:56 on Aug 10,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vopt-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading work.arraypkg
+# Loading work.sinewave
+# Loading work.mask_gen
+# Loading work.tb_top(behavioral)#1
+# .main_pane.wave.interior.cs.body.pw.wf
+do fir.do
+# End time: 13:57:50 on Aug 10,2024, Elapsed time: 0:10:54
+# Errors: 0, Warnings: 3
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is somalianpirate@somalia.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:57:50 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Compiling package arraypkg
+# End time: 13:57:50 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:57:50 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package instance fixed_pkg
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package mask_gen
+# End time: 13:57:50 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:57:50 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package sinewave
+# End time: 13:57:51 on Aug 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:57:51 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dac
+# -- Compiling architecture behavioral of dac
+# End time: 13:57:51 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:57:51 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling entity fir
+# -- Compiling architecture behavioral of fir
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vcom-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# End time: 13:57:51 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:57:51 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Compiling entity top
+# -- Compiling architecture behavioral of top
+# -- Loading entity fir
+# -- Loading entity dac
+# End time: 13:57:51 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 13:57:51 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_top
+# -- Compiling architecture behavioral of tb_top
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Loading entity top
+# End time: 13:57:51 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -coverage tb_top 
+# Start time: 13:57:51 on Aug 10,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vopt-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading work.arraypkg
+# Loading work.sinewave
+# Loading work.mask_gen
+# Loading work.tb_top(behavioral)#1
+# .main_pane.wave.interior.cs.body.pw.wf
+do fir.do
+# End time: 14:00:23 on Aug 10,2024, Elapsed time: 0:02:32
+# Errors: 0, Warnings: 2
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is somalianpirate@somalia.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:00:23 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Compiling package arraypkg
+# End time: 14:00:23 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:00:23 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package instance fixed_pkg
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package mask_gen
+# End time: 14:00:23 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:00:23 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package sinewave
+# End time: 14:00:23 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:00:23 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dac
+# -- Compiling architecture behavioral of dac
+# End time: 14:00:24 on Aug 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:00:24 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling entity fir
+# -- Compiling architecture behavioral of fir
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vcom-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# End time: 14:00:24 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:00:24 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Compiling entity top
+# -- Compiling architecture behavioral of top
+# -- Loading entity fir
+# -- Loading entity dac
+# End time: 14:00:24 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:00:24 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_top
+# -- Compiling architecture behavioral of tb_top
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Loading entity top
+# End time: 14:00:24 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -coverage tb_top 
+# Start time: 14:00:24 on Aug 10,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vopt-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading work.arraypkg
+# Loading work.sinewave
+# Loading work.mask_gen
+# Loading work.tb_top(behavioral)#1
+# .main_pane.wave.interior.cs.body.pw.wf
+do fir.do
+# End time: 14:05:26 on Aug 10,2024, Elapsed time: 0:05:02
+# Errors: 0, Warnings: 2
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is somalianpirate@somalia.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:05:26 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Compiling package arraypkg
+# End time: 14:05:26 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:05:26 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package instance fixed_pkg
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package mask_gen
+# End time: 14:05:26 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:05:26 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package sinewave
+# End time: 14:05:26 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:05:26 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dac
+# -- Compiling architecture behavioral of dac
+# End time: 14:05:26 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:05:26 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling entity fir
+# -- Compiling architecture behavioral of fir
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vcom-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# End time: 14:05:26 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:05:26 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Compiling entity top
+# -- Compiling architecture behavioral of top
+# -- Loading entity fir
+# -- Loading entity dac
+# End time: 14:05:26 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:05:26 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_top
+# -- Compiling architecture behavioral of tb_top
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Loading entity top
+# End time: 14:05:27 on Aug 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -coverage tb_top 
+# Start time: 14:05:27 on Aug 10,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vopt-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading work.arraypkg
+# Loading work.sinewave
+# Loading work.mask_gen
+# Loading work.tb_top(behavioral)#1
+# .main_pane.wave.interior.cs.body.pw.wf
+do fir.do
+# End time: 14:34:17 on Aug 10,2024, Elapsed time: 0:28:50
+# Errors: 0, Warnings: 2
+# ** Warning: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is somalianpirate@somalia.
+# ** Warning: (vlib-34) Library already exists at "work".
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:34:17 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/arraypkg.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Compiling package arraypkg
+# End time: 14:34:17 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:34:17 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package instance fixed_pkg
+# -- Loading package NUMERIC_STD
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package mask_gen
+# End time: 14:34:17 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:34:17 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling package sinewave
+# End time: 14:34:17 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:34:17 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/dac.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity dac
+# -- Compiling architecture behavioral of dac
+# End time: 14:34:18 on Aug 10,2024, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:34:18 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Compiling entity fir
+# -- Compiling architecture behavioral of fir
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vcom-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# End time: 14:34:18 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:34:18 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Compiling entity top
+# -- Compiling architecture behavioral of top
+# -- Loading entity fir
+# -- Loading entity dac
+# End time: 14:34:18 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+# Start time: 14:34:18 on Aug 10,2024
+# vcom -reportprogress 300 /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd "+cover" 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_top
+# -- Compiling architecture behavioral of tb_top
+# -- Loading package instance fixed_pkg
+# -- Loading package fixed_float_types
+# -- Loading package fixed_generic_pkg
+# -- Loading package MATH_REAL
+# -- Loading package body fixed_generic_pkg
+# -- Loading package arraypkg
+# -- Loading package sinewave
+# -- Loading package mask_gen
+# -- Loading entity top
+# End time: 14:34:18 on Aug 10,2024, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -coverage tb_top 
+# Start time: 14:34:18 on Aug 10,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vopt-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.fixed_float_types
+# Loading ieee.math_real(body)
+# Loading ieee.fixed_generic_pkg(body)
+# Loading ieee.fixed_pkg
+# Loading work.arraypkg
+# Loading work.sinewave
+# Loading work.mask_gen
+# Loading work.tb_top(behavioral)#1
+# .main_pane.wave.interior.cs.body.pw.wf

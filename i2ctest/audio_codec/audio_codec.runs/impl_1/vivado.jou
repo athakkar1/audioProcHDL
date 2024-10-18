@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Sun Oct  6 11:02:41 2024
+# Process ID: 4095496
+# Current directory: /home/somalianpirate/Documents/projects/audio_codec/audio_codec.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/somalianpirate/Documents/projects/audio_codec/audio_codec.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/somalianpirate/Documents/projects/audio_codec/audio_codec.runs/impl_1/vivado.jou
+# Running On: somalia, OS: Linux, CPU Frequency: 3399.991 MHz, CPU Physical cores: 4, Host memory: 16577 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace

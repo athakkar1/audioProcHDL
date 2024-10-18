@@ -1,0 +1,3 @@
+/home/somalianpirate/Documents/projects/audio_codec/platform/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+/home/somalianpirate/Documents/projects/audio_codec/platform/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+/home/somalianpirate/Documents/projects/audio_codec/platform/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir
