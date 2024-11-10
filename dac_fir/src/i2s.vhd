@@ -22,17 +22,17 @@ entity i2s is
 end entity i2s;
 
 architecture RTL of i2s is
-    signal bclk_i : std_logic := '0';
+    signal bclk_i : std_logic := '1';
     signal pblrc_i : std_logic := '0';
     signal reclrc_i : std_logic := '0';
-    signal pbshift : std_logic_vector(data_len -1 downto 0);
-    signal recshift : std_logic_vector(data_len -1 downto 0);
+    signal pbshift : std_logic_vector(data_len -1 downto 0) := (others => '0');
+    signal recshift : std_logic_vector(data_len -1 downto 0) := (others => '0');
 begin
     bclk_gen : process(mclk)
         variable count : integer := 0;
     begin
         if rising_edge(mclk) then
-            if count < 2 then
+            if count < 128 then
                 count := count + 1;
             else
                 bclk_i <= not bclk_i;
@@ -87,12 +87,7 @@ begin
         if rising_edge(bclk_i) then
             if reset = '1' then
                 if count = 0 then
-                    if reclrc_i = '0' then
-                        reclrc_i <= '1';
-                    else
-                        reclrc_i <= '0';
-                    end if;
-                    count := count + 1;
+                  count := count + 1;
                 elsif count <= data_len then
                     count := count + 1;
                 else
@@ -103,17 +98,13 @@ begin
                 recword_right <= (others => '0');
             else
                 if count = 0 then
-                    if reclrc_i = '0' then
-                        reclrc_i <= '1';
-                    else
-                        reclrc_i <= '0';
-                    end if;
                     count := count + 1;
                 elsif count <= data_len then
                     recshift <= recshift(data_len -2 downto 0) & recdat;
                     count := count + 1;
+
                 else
-                    if reclrc_i = '0' then
+                    if pblrc_i = '0' then
                        recword_left <= recshift; 
                     else
                         recword_right <= recshift; 
@@ -125,5 +116,5 @@ begin
     end process recording;
     bclk <= bclk_i;
     pblrc <= pblrc_i;
-    reclrc <= reclrc_i;
+    reclrc <= pblrc_i;
 end architecture RTL;

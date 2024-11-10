@@ -1,17 +1,4 @@
-/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd
-Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity tb_top
--- Compiling architecture behavioral of tb_top
-** Error: (vcom-11) Could not find work.top.
-** Error (suppressible): /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd(19): (vcom-1195) Cannot find expanded name "work.top".
-** Error: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd(19): Unknown expanded name.
-** Note: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd(45): VHDL Compiler exiting
-
-} {9.0 10.0 11.0 12.0} {}} /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/test_fir.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/test_fir.vhd
+/home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/test_fir.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/test_fir.vhd
 Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -29,23 +16,20 @@ Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
 ** Error: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/test_fir.vhd(74): (vcom-1035) Formal port "reset" has OPEN or no actual associated with it.
 ** Note: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/test_fir.vhd(91): VHDL Compiler exiting
 
-} {16.0 17.0} {}} /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd {2 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd
+} {16.0 17.0} {}} /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd
 Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
 -- Loading package STANDARD
 -- Loading package TEXTIO
 -- Loading package std_logic_1164
 -- Loading package NUMERIC_STD
--- Loading package instance fixed_pkg
--- Loading package fixed_float_types
--- Loading package fixed_generic_pkg
--- Loading package MATH_REAL
--- Loading package body fixed_generic_pkg
--- Loading package arraypkg
--- Compiling entity fir
--- Compiling architecture behavioral of fir
-** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vcom-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+-- Compiling entity tb_top
+-- Compiling architecture behavioral of tb_top
+** Error: (vcom-11) Could not find work.top.
+** Error (suppressible): /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd(19): (vcom-1195) Cannot find expanded name "work.top".
+** Error: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd(19): Unknown expanded name.
+** Note: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/tb_top.vhd(45): VHDL Compiler exiting
 
-} {} {}} /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd
+} {9.0 10.0 11.0 12.0} {}} /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd {0 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd
 Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
 -- Loading package STANDARD
 -- Loading package TEXTIO
@@ -61,7 +45,23 @@ Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
 ** Error: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd(9): (vcom-1192) Array length is 59; aggregate length is 155.
 ** Note: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/mask_gen.vhd(166): VHDL Compiler exiting
 
-} {14.0 15.0} {}} /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd
+} {14.0 15.0} {}} /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd {2 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd
+Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package instance fixed_pkg
+-- Loading package fixed_float_types
+-- Loading package fixed_generic_pkg
+-- Loading package MATH_REAL
+-- Loading package body fixed_generic_pkg
+-- Loading package arraypkg
+-- Compiling entity fir
+-- Compiling architecture behavioral of fir
+** Warning: /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/fir.vhd(51): (vcom-1626) TO_INTEGER function paramater's size (41) is out of range (>32 bits). Result is truncated.
+
+} {} {}} /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd {1 {vcom -work work -2002 -explicit -vopt -stats=none /home/somalianpirate/Documents/projects/audioProcHDL/dac_fir/src/sinewave.vhd
 Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
 -- Loading package STANDARD
 -- Loading package TEXTIO
