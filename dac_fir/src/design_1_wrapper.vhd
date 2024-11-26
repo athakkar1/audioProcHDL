@@ -24,6 +24,8 @@ entity design_1_wrapper is
         bclk              : out   std_logic;
         pbdat             : out   std_logic;
         pblrc             : out   std_logic;
+        recdat            : in    std_logic;
+        reclrc            : out   std_logic;
         reset             : in    std_logic;
         led_out           : out   std_logic;
         DDR_addr          : inout STD_LOGIC_VECTOR(14 downto 0);
@@ -84,19 +86,6 @@ architecture STRUCTURE of design_1_wrapper is
             IIC_0_0_scl_t     : out   STD_LOGIC
         );
     end component design_1;
-    COMPONENT ila_0
-
-        PORT(
-            clk    : IN STD_LOGIC;
-            probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-            probe1 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-            probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-            probe3 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-            probe4 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-            probe5 : IN STD_LOGIC_VECTOR(23 DOWNTO 0);
-            probe6 : IN STD_LOGIC_VECTOR(23 DOWNTO 0)
-        );
-    END COMPONENT;
 
     component IOBUF is
         port(
@@ -114,7 +103,8 @@ architecture STRUCTURE of design_1_wrapper is
             mclk_i2s : out std_logic;
             bclk     : out std_logic;
             pblrc    : out std_logic;
-            pbdat    : out std_logic
+            pbdat    : out std_logic;
+            recdat   : in std_logic
         );
     end component i2s_top;
 
@@ -125,23 +115,25 @@ architecture STRUCTURE of design_1_wrapper is
     signal IIC_0_0_sda_o   : STD_LOGIC;
     signal IIC_0_0_sda_t   : STD_LOGIC;
     signal led_1           : std_logic := '0';
-    signal bclk_i          : std_logic_vector(0 downto 0);
-    signal pblrc_i         : std_logic_vector(0 downto 0);
-    signal pbdat_i         : std_logic_vector(0 downto 0);
+    signal bclk_i          : std_logic;
+    signal pblrc_i         : std_logic;
+    signal pbdat_i         : std_logic;
     signal mclk_i          : std_logic;
 begin
-    bclk        <= bclk_i(0);
-    pbdat       <= pbdat_i(0);
-    pblrc       <= pblrc_i(0);
+    bclk        <= bclk_i;
+    pbdat       <= pbdat_i;
+    pblrc       <= pblrc_i;
     ac_mclk <= mclk_i;
+    reclrc <= pblrc_i;
     i2s_top_inst : component i2s_top
         port map(
             mclk     => mclk,
             reset    => reset,
             mclk_i2s => mclk_i,
-            bclk     => bclk_i(0),
-            pblrc    => pblrc_i(0),
-            pbdat    => pbdat_i(0)
+            bclk     => bclk_i,
+            pblrc    => pblrc_i,
+            pbdat    => pbdat_i,
+            recdat => recdat
         );
 
     IIC_0_0_scl_iobuf : component IOBUF
@@ -157,17 +149,6 @@ begin
             IO => IIC_0_0_sda_io,
             O  => IIC_0_0_sda_i,
             T  => IIC_0_0_sda_t
-        );
-    ila : ila_0
-        PORT MAP(
-            clk    => mclk_i,
-            probe0 => bclk_i,
-            probe1 => reset,
-            probe2 => pblrc_i,
-            probe3 => pbdat_i,
-            probe4 => recdat_i,
-            probe5 => recword_right_i,
-            probe6 => recword_left_i
         );
     design_1_i : component design_1
         port map(
