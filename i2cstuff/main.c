@@ -78,11 +78,11 @@ int audioSetup(void){
     AudioWriteToReg(R15_SOFTWARE_RESET, 				0b000000000); //Perform Reset
 	usleep(75000);
 	AudioWriteToReg(R6_POWER_MANAGEMENT, 				0b000110000); //Power Up
-	AudioWriteToReg(R0_LEFT_CHANNEL_ADC_INPUT_VOLUME, 	0b000101100); //Default Volume
-	AudioWriteToReg(R1_RIGHT_CHANNEL_ADC_INPUT_VOLUME, 	0b000101100); //Default Volume
-	AudioWriteToReg(R2_LEFT_CHANNEL_DAC_VOLUME, 		0b101111001);
-	AudioWriteToReg(R3_RIGHT_CHANNEL_DAC_VOLUME, 		0b101111001);
-	AudioWriteToReg(R4_ANALOG_AUDIO_PATH, 				0b000000000); //Allow Mixed DAC, Mute MIC
+	AudioWriteToReg(R0_LEFT_CHANNEL_ADC_INPUT_VOLUME, 	0b000010111); //Default Volume
+	AudioWriteToReg(R1_RIGHT_CHANNEL_ADC_INPUT_VOLUME, 	0b000010111); //Default Volume
+	AudioWriteToReg(R2_LEFT_CHANNEL_DAC_VOLUME, 		0b001111001);
+	AudioWriteToReg(R3_RIGHT_CHANNEL_DAC_VOLUME, 		0b001111001);
+	AudioWriteToReg(R4_ANALOG_AUDIO_PATH, 				0b000010100); //Allow Mixed DAC, Mute MIC
 	AudioWriteToReg(R5_DIGITAL_AUDIO_PATH, 				0b000000000); //48 kHz Sampling Rate emphasis, no high pass
 	AudioWriteToReg(R7_DIGITAL_AUDIO_I_F, 				0b000001010); //I2S Mode, set-up 32 bits
 	AudioWriteToReg(R8_SAMPLING_RATE, 					0b000000000);
